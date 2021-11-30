@@ -1,15 +1,12 @@
-import React from 'react'
-import { FC } from 'react'
+import {Dispatch, FC, SetStateAction } from 'react'
 
-type Prop = {
-    value: number
+type ButtonProp = {
+    increment: Dispatch<SetStateAction<number>>
 }
 
-const FunctionComponent:FC<Prop> = ({ value }) => {
+const FunctionComponent:FC<ButtonProp> = ({ increment }) => {
     return (
-        <div>
-            {value}
-        </div>
+            <button onClick={()=>{increment((prev)=> prev+ 1)}}>+</button>
     )
 }
 

@@ -1,15 +1,14 @@
-import React from 'react';
-import ClassComponent from './components/ClassComponent'
+import React, { useState } from 'react';
 import FunctionComponent from './components/FunctionComponent'
 
 import './App.css';
 
-
 function App() {
+  const [counter, setCounter] = useState<number>(0)
   return (
     <div className="App">
-      <ClassComponent value={5} />
-      <FunctionComponent value={12} />
+      {counter}
+      <FunctionComponent increment={setCounter} />
     </div>
   );
 }
