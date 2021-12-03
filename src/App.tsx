@@ -6,7 +6,7 @@ import './App.css';
 import HooksTraining from './components/HooksTraining';
 
 
-function App() {
+const App = () => {
   const [counter, setCounter] = useState < number > (0)
 
   return (
@@ -16,7 +16,7 @@ function App() {
         <FunctionComponent increment={setCounter} />
       </div>
       <div>--------------------------------------------------</div>
-      <HooksTraining />
+      <HooksTraining/>
     </div>
   );
 }
